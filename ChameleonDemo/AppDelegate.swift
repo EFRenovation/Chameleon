@@ -14,15 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-        Chameleon.setGlobalThemeUsingPrimaryColor(.flatPlum,
+        Chameleon.setGlobalThemeUsingPrimaryColor(
+            .flatPlum,
             withSecondaryColor: .flatBlue,
-            andContentStyle: .contrast)
-        
+            andContentStyle: .contrast
+        )
         return true
     }
-
-
 }
-

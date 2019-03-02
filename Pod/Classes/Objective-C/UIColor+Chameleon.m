@@ -589,7 +589,10 @@
     if (string.length == 0) {
         return nil;
     }
-    
+
+    //Eliminate any whitespace before proceding
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
     //Check to see if we need to add a hashtag
     if('#' != [string characterAtIndex:0]) {
         string = [NSString stringWithFormat:@"#%@", string];
@@ -932,7 +935,8 @@
             rgba[3] = components[3];
             break;
         }
-            
+
+        case kCGColorSpaceModelXYZ:
         case kCGColorSpaceModelCMYK:
         case kCGColorSpaceModelDeviceN:
         case kCGColorSpaceModelIndexed:
